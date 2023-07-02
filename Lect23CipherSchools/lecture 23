@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+public class LongestPathRootToLeaf {
+public static ArrayList<Integer> getLongest Path (TreeNode root) {
+if (root== null) {
+return mult;
+}
+ArrayList<Integer> path = new ArrayList();
+path.add(root.data);
+ArrayList<Integer> leftLongestPath = getLongestPath(root.left);
+ArrayList<Integer> rightLongestPath = getLongestPath (root.right);
+ArrayList<Integer> result = getMax (leftLongestPath, rightLongestPath);
+if (result - null) {
+path.addAll(result);
+}
+return path;
+}
+private static ArrayList<Integer>getMax (ArrayList<Integer leftLongest Path, ArrayList<Integer> right LongestPath) {
+if (leftLongest Path= & right Longest Path == null) {
+return null;
+}
+if (leftLongest Path == null) {
+return rightLongestPath;
+}
+if (rightLongestPath=null) {
+return leftLongestPath;
+}
+if (leftLongest Path.size() > rightLongest Path.size()) {
+return leftLongestPath;
+} 
+else {
+return right Longest Path;
+}
+}
+public static void main(String[] args) (
+TreeNode root new TreeNode( data: 8);
+root.left = new TreeNodel data: 6);
+root.right = new TreeNode( data 3);
+root.left.right= new TreeNode(data: 5);
+root.left.left = new TreeNode(data: 7);
+root.right.left= new TreeNode(data: 4);
+root.right.right = new TreeNode(data: 12);
+root.right.right.right = new TreeNode( data: 11);
+root.right.right.right.right = new TreeNode( data: 10);
+
+ArrayList<Integer» result getLongestPath(root);
+for(Integer data: result) {
+System.out.print(data + ");
+}
